@@ -24,6 +24,17 @@ cout << "Angka telah disimpan";
 getch();
 }
 
+void output(int data[]){
+    system("cls");
+
+    cout << "\nData yang Anda masukkan adalah:\n";
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "Angka ke-" << (i + 1) << ": " << data[i] << endl;
+    }
+    getch();
+}
+
 
 void mPertama(string pesan){
 system("cls");
@@ -51,7 +62,7 @@ do
     input(data);
     break;
    case '2':
-    mPertama("ke- dua");
+    output(data);
     /* code */ 
     break;  
    case '3':
