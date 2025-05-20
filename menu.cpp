@@ -35,6 +35,29 @@ void output(int data[]){
     getch();
 }
 
+void sorting(int data[]) {
+    system("cls");
+    
+    // Exchange Sort
+    for (int i = 0; i < 5 - 1; i++) {
+        for (int j = i + 1; j < 5; j++) {
+            if (data[i] > data[j]) {
+                int temp = data[i];
+                data[i] = data[j];
+                data[j] = temp;
+            }
+        }
+    }
+
+    cout << "Data setelah diurutkan dari kecil ke besar :\n";
+    for (int i = 0; i < 5; i++) {
+        cout << "Angka ke-" << (i + 1) << ": " << data[i] << endl;
+    }
+    getch();
+}
+
+
+
 
 void mPertama(string pesan){
 system("cls");
@@ -66,7 +89,7 @@ do
     /* code */ 
     break;  
    case '3':
-    mPertama("ke- tiga");
+    sorting(data);
     /* code */
     break;  
    case '4':
